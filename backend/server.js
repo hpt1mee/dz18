@@ -19,12 +19,12 @@ app.get('/', (req, res) => {
 
 app.post('/addUser', (req, res) => {
 	const filePath = path.join(process.cwd(), 'db', 'db.json')
-	const users = JSON.parse(fs.readFileSync(filePath, 'utf-8')) // Парсим JSON
+	const users = JSON.parse(fs.readFileSync(filePath, 'utf-8')) 
 	const newUser = req.body
-	newUser.id = Date.now().toString() // Добавляем уникальный ID
-	users.USERS.push(newUser) // Добавляем нового пользователя
-	fs.writeFileSync(filePath, JSON.stringify(users)) // Сохраняем обратно в файл
-	res.status(201).json({ message: 'User added successfully!' }) // Отправляем ответ
+	newUser.id = Date.now().toString() 
+	users.USERS.push(newUser) 
+	fs.writeFileSync(filePath, JSON.stringify(users)) 
+
 })
 
 app.get('/getUsers', (req, res) => {
