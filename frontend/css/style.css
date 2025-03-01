@@ -47,6 +47,7 @@ html {
 	flex-direction: column;
 	position: relative;
 	gap: 15px;
+	overflow-y: auto;
 }
 .find {
 	width: 50px;
@@ -58,8 +59,9 @@ html {
 	background-color: green;
 }
 .person {
-	width: 90%;
-	height: 25%;
+	min-width: 90%;
+	min-height: 25%;
+
 	background-color: orange;
 	border-radius: 17px;
 	display: flex;
@@ -91,4 +93,26 @@ html {
 .add {
 	width: 100px;
 	height: 25px;
+}
+
+.filter-age {
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+
+.filter-city {
+	width: 150px;
+	outline: none;
+	border: none;
+	height: 50px;
+	position: absolute;
+	right: 15px;
+	top: 75px;
+	text-align: center;
 }

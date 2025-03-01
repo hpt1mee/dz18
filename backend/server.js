@@ -47,6 +47,8 @@ app.get('/search', (req, res) => {
 	res.json(result)
 })
 
+
+
 app.delete('/deleteUser/:id', (req, res) => {
 	const filePath = path.join(process.cwd(), 'db', 'db.json')
 	const users = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
